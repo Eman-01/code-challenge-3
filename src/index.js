@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const baseURL = "http://localhost:3000";
+    const BASE_URL = "http://localhost:3000";
 
     const fetchMovieDetails = (id) => {
-      return fetch(`${baseURL}/films/${id}`)
+      return fetch(`${BASE_URL}/films/${id}`)
         .then(response => response.json())
     };
 
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
           body: JSON.stringify({ tickets_sold: updatedTicketsSold }),
       })
       .then(() => {
-          return fetch(`${baseURL}/tickets`, {
+          return fetch(`${BASE_URL}/tickets`, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({ film_id: movie.id, number_of_tickets: 1 }),
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const renderMovieList = () => {
-      fetch(`${baseURL}/films`)
+      fetch(`${BASE_URL}/films`)
         .then(response => response.json())
         .then(movies => {
           const filmsList = document.getElementById("films");
