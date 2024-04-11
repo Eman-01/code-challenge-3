@@ -176,7 +176,7 @@ attempting the bonus deliverables!**
    details with the new movie's details. Note that you may have to make an
    additional GET request to access the movie's details.
 
-
+project link:https://stirring-kheer-b060cb.netlify.app
 
 
 
